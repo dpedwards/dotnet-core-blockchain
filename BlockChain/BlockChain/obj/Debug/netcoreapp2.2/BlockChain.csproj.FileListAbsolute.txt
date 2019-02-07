@@ -1,0 +1,3 @@
+D:\MyWorkspace\GitHub\dpedwards\dotnet-core-blockchain\BlockChain\BlockChain\obj\Debug\netcoreapp2.2\BlockChain.csproj.CoreCompileInputs.cache
+D:\MyWorkspace\GitHub\dpedwards\dotnet-core-blockchain\BlockChain\BlockChain\obj\Debug\netcoreapp2.2\BlockChain.AssemblyInfoInputs.cache
+D:\MyWorkspace\GitHub\dpedwards\dotnet-core-blockchain\BlockChain\BlockChain\obj\Debug\netcoreapp2.2\BlockChain.AssemblyInfo.cs

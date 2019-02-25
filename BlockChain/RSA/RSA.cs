@@ -19,6 +19,8 @@ namespace RSA
 
         /*
          * KeyGenerate() Method to generate keys
+         * 
+         * @return new Wallet private & public keys
          */ 
         public static Wallet KeyGenerate()
         {
@@ -34,6 +36,8 @@ namespace RSA
 
         /*
          * Sign() Method for signature to pass a transaction 
+         * 
+         * @return signature
          */ 
         public static string Sign(string privKey, string msgToSign)
         {
@@ -49,6 +53,8 @@ namespace RSA
 
         /*
          * Verify() Method to verify signature 
+         * 
+         * @return bol
          */ 
         public static bool Verify(string pbKey, string originalMessage, string signedMessage)
         {

@@ -22,7 +22,7 @@ namespace BlockChain.Models
         public int Proof { get; set; }
         public string PreviousHash { get; set; }
 
-        /**
+        /*
          * Overrides and returns the block string
          * 
          * @return block

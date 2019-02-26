@@ -2,7 +2,9 @@
 using RSA;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -232,11 +234,81 @@ namespace BlockChain.Models
          }
 
         /*
+         * ResolveConflicts() Method for consensus to solve conflicts 
+         * maybe if two different miners solve the Proof-of-Work at the same time and thus add their blocks to the last known block in the chain. 
+         * 
+         */
+        private bool ResolveConflicts()
+        {
+            List<Block> newChain = null;
+            int maxLength = _chain.Count;
+
+            foreach (Node node in _nodes)
+            {
+                var url = new Uri(node.Address, "/chain");
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                var response = (HttpWebResponse)request.GetResponse();
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    var model = new
+                    {
+                        chain = new List<Block>(),
+                        length = 0
+                    };
+                    string json = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                    var data = JsonConvert.DeserializeAnonymousType(json, model);
+
+                    if (data.chain.Count > _chain.Count && IsValidChain(data.chain))
+                    {
+                        maxLength = data.chain.Count;
+                        newChain = data.chain;
+                    }
+                }
+            }
+
+            if (newChain != null)
+            {
+                _chain = newChain;
+                return true;
+            }
+
+            return false;
+        }
+
+        /*
+         * IsValidChain() Method to check if chain is valid
+         */ 
+        private bool IsValidChain(List<Block> chain)
+        {
+            Block block = null;
+            Block lastBlock = chain.First();
+            int currentIndex = 1;
+            while (currentIndex < chain.Count)
+            {
+                block = chain.ElementAt(currentIndex);
+
+                //Check that the hash of the block is correct
+                if (block.PreviousHash != GetHash(lastBlock))
+                    return false;
+
+                //Check that the Proof-of-Work is correct
+                if (!IsValidProof(block.Transactions, block.Proof, lastBlock.PreviousHash))
+                    return false;
+
+                lastBlock = block;
+                currentIndex++;
+            }
+
+            return true;
+        }
+
+        /*
          * Mine() Method for mining
          * 
          * @return block
          */
-         internal Block Mine()
+        internal Block Mine()
          {
             int proof = CreateProofOfWork(_lastBlock.PreviousHash);
 
@@ -270,6 +342,52 @@ namespace BlockChain.Models
          {
             _nodes.Add(new Node { Address = new Uri(address) });
          }
+
+        /*
+         * RegisterNodes() Method to register new nodes
+         * 
+         * @param nodes
+         * @return result.Substring()
+         */
+         internal string RegisterNodes(string[] nodes)
+         {
+            var builder = new StringBuilder();
+            foreach (string node in nodes)
+            {
+                string url = node;
+                RegisterNode(url);
+                builder.Append($"{url}, ");
+            }
+
+            builder.Insert(0, $"{nodes.Count()} new nodes have been added:");
+            string result = builder.ToString();
+
+            return result.Substring(0, result.Length - 2);
+         }
+
+        /*
+         * Consensus() Object
+         * 
+         * 
+         * @return response
+         */
+         internal object Consensus()
+         {
+            bool replaced = ResolveConflicts();
+            string message = replaced ? "was replaced" : "is authoritive";
+
+            var response = new
+            {
+                Message = $"Our chain {message}",
+                Chain = _chain
+            };
+
+            return response;
+         }
+
+        
+
+
 
 
 

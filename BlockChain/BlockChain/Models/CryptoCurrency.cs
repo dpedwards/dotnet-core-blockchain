@@ -185,17 +185,17 @@ namespace BlockChain.Models
         }
 
         /*
-        * HasBalance() Method to check balance 
-        * 
-        * @param transaction
-        * @return balance
-        */
-        public bool HasBalance(Transaction transaction)
-        {
-            var balanceTransaction = TransactionByAddress(transaction.Sender);
-            decimal balance = 0;
-            foreach (var item in balanceTransaction)
-            {
+         * HasBalance() Method to check balance 
+         * 
+         * @param transaction
+         * @return balance
+         */
+         public bool HasBalance(Transaction transaction)
+         {
+             var balanceTransaction = TransactionByAddress(transaction.Sender);
+             decimal balance = 0;
+             foreach (var item in balanceTransaction)
+             {
                 if (item.Recipient == transaction.Sender)
                 {
                     balance = balance + item.Amount;
@@ -204,9 +204,35 @@ namespace BlockChain.Models
                 {
                     balance = balance - item.Amount;
                 }
-            }
+             }
 
-            return balance >= (transaction.Amount + transaction.Fees);
-        }
+             return balance >= (transaction.Amount + transaction.Fees);
+         }
+
+        /*
+         * AddTransaction() Method to add transaction 
+         * 
+         * @param transaction
+         */
+         private void AddTransaction(Transaction transaction)
+         {
+            _currentTransactions.Add(transaction);
+
+            if (transaction.Sender != NodeId)
+            {
+                _currentTransactions.Add(new Transaction
+                {
+                    Sender = transaction.Sender,
+                    Recipient = NodeId,
+                    Amount = transaction.Fees,
+                    Signature = "",
+                    Fees = 0
+                });
+            }
+         }
+
+
+
+
     }
 }

@@ -150,6 +150,22 @@ namespace BlockChain.Models
             return result.StartsWith("00"); // difficulty
         }
 
+        /*
+         * VerifyTransactionSignature() Method to validate transaction signature 
+         * 
+         * @param transaction
+         * @param signedMessage
+         * @param publicKey
+         * @return verified
+         */
+        public bool VerifyTransactionSignature(Transaction transaction, string signedMessage, string publicKey)
+        {
+            string originalMessage = transaction.ToString();
+            bool verified = RSA.RSA.Verify(publicKey, originalMessage, signedMessage);
+
+            return verified;
+        }
+
 
     }
 }

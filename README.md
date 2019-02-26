@@ -58,7 +58,7 @@ project documentation and demo pages can be found in the [`/docs`](docs) if subm
 ### Other:
 
 - [Microsoft.NETCore.App](https://dotnet.microsoft.com/)
-- [NBitcoin(https://github.com/MetacoSA/NBitcoin)
+- [NBitcoin](https://github.com/MetacoSA/NBitcoin)
 - [Newtonsoft.Json](https://www.newtonsoft.com/json)
 
 

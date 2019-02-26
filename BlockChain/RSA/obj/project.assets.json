@@ -3742,11 +3742,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\data\\MyProjects\\GitHubs\\dotnet-core-blockchain\\BlockChain\\RSA\\RSA.csproj",
+      "projectUniqueName": "I:\\data\\MyProjects\\GitHub\\dotnet-core-blockchain\\BlockChain\\RSA\\RSA.csproj",
       "projectName": "RSA",
-      "projectPath": "I:\\data\\MyProjects\\GitHubs\\dotnet-core-blockchain\\BlockChain\\RSA\\RSA.csproj",
+      "projectPath": "I:\\data\\MyProjects\\GitHub\\dotnet-core-blockchain\\BlockChain\\RSA\\RSA.csproj",
       "packagesPath": "C:\\Users\\de\\.nuget\\packages\\",
-      "outputPath": "I:\\data\\MyProjects\\GitHubs\\dotnet-core-blockchain\\BlockChain\\RSA\\obj\\",
+      "outputPath": "I:\\data\\MyProjects\\GitHub\\dotnet-core-blockchain\\BlockChain\\RSA\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

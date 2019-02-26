@@ -12327,11 +12327,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\data\\MyProjects\\GitHubs\\dotnet-core-blockchain\\BlockChain\\BlockChain\\BlockChain.csproj",
+      "projectUniqueName": "I:\\data\\MyProjects\\GitHub\\dotnet-core-blockchain\\BlockChain\\BlockChain\\BlockChain.csproj",
       "projectName": "BlockChain",
-      "projectPath": "I:\\data\\MyProjects\\GitHubs\\dotnet-core-blockchain\\BlockChain\\BlockChain\\BlockChain.csproj",
+      "projectPath": "I:\\data\\MyProjects\\GitHub\\dotnet-core-blockchain\\BlockChain\\BlockChain\\BlockChain.csproj",
       "packagesPath": "C:\\Users\\de\\.nuget\\packages\\",
-      "outputPath": "I:\\data\\MyProjects\\GitHubs\\dotnet-core-blockchain\\BlockChain\\BlockChain\\obj\\",
+      "outputPath": "I:\\data\\MyProjects\\GitHub\\dotnet-core-blockchain\\BlockChain\\BlockChain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12350,8 +12350,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "I:\\data\\MyProjects\\GitHubs\\dotnet-core-blockchain\\BlockChain\\RSA\\RSA.csproj": {
-              "projectPath": "I:\\data\\MyProjects\\GitHubs\\dotnet-core-blockchain\\BlockChain\\RSA\\RSA.csproj"
+            "I:\\data\\MyProjects\\GitHub\\dotnet-core-blockchain\\BlockChain\\RSA\\RSA.csproj": {
+              "projectPath": "I:\\data\\MyProjects\\GitHub\\dotnet-core-blockchain\\BlockChain\\RSA\\RSA.csproj"
             }
           }
         }

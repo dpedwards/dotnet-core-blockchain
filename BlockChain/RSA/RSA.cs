@@ -37,6 +37,8 @@ namespace RSA
         /*
          * Sign() Method for signature to pass a transaction 
          * 
+         * @param privKey
+         * @param msgToSign
          * @return signature
          */ 
         public static string Sign(string privKey, string msgToSign)
@@ -54,6 +56,9 @@ namespace RSA
         /*
          * Verify() Method to verify signature 
          * 
+         * @param pbKey
+         * @param originalMessage
+         * @param signedMessage
          * @return bol
          */ 
         public static bool Verify(string pbKey, string originalMessage, string signedMessage)

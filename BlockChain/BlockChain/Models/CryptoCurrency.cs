@@ -56,6 +56,8 @@ namespace BlockChain.Models
         /*
          * CreateNewBlock() Method to create new block 
          * 
+         * @param proof 
+         * @param previousHash
          * @return block
          */
         private Block CreateNewBlock(int proof, string previousHash = null)
@@ -77,6 +79,7 @@ namespace BlockChain.Models
         /*
          * GetHash() Method to get block hashes 
          * 
+         * @param block
          * @return blockText
          */ 
         private string GetHash(Block block)
@@ -87,6 +90,9 @@ namespace BlockChain.Models
 
         /*
          * GetSha256() Method to get SHA (Secure Hash Algorithm ) hash
+         * 
+         * @param blockText
+         * @return hasBuilder.ToString()
          */ 
         private string GetSha256(string blockText)
         {
@@ -101,5 +107,49 @@ namespace BlockChain.Models
 
             return hasBuilder.ToString();
         }
+
+        /*
+        * CreateProofOfWork() Method for Proof-of-Work (PoW) concept
+        * 
+        * @param previousHash
+        * @return proof
+        */
+        private int CreateProofOfWork(string previousHash)
+        {
+            int proof = 0;
+            while (!IsValidProof(_currentTransactions, proof, previousHash))
+                proof++;
+
+            if (blockCount == 10)
+            {
+                blockCount = 0;
+                reward = reward / 2;
+            }
+
+            var transaction = new Transaction { Sender = "0", Recipient = NodeId, Amount = reward, Fees = 0, Signature = "" };
+            _currentTransactions.Add(transaction);
+
+            blockCount++;
+            return proof;
+        }
+
+        /*
+         * IsValidProof() Method for PoW difficulty
+         * 
+         * @param transactions
+         * @param proof
+         * @param previousHash
+         * @return result.StartsWith("")
+         */
+        private bool IsValidProof(List<Transaction> transactions, int proof, string previousHash)
+        {
+            var signatures = transactions.Select(x => x.Signature).ToArray();
+            string guess = $"{signatures}{proof}{previousHash}";
+            string result = GetSha256(guess);
+
+            return result.StartsWith("00"); // difficulty
+        }
+
+
     }
 }

@@ -245,6 +245,22 @@ namespace BlockChain.Models
             return block;
          }
 
+        /*
+         * GetFullChain() Method to get full chain length 
+         * 
+         * @return response 
+         */
+         internal string GetFullChain()
+         {
+            var response = new
+            {
+                chain = _chain.ToArray(),
+                length = _chain.Count
+            };
+
+            return JsonConvert.SerializeObject(response);
+         }
+
 
 
 

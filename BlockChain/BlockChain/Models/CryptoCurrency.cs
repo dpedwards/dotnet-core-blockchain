@@ -166,6 +166,22 @@ namespace BlockChain.Models
             return verified;
         }
 
+        /*
+         * TransactionByAddress() Method to check all transactions of particular owner address
+         * 
+         * @param ownerAddress
+         * @return transactions 
+         */
+        private List<Transaction> TransactionByAddress(string ownerAddress)
+        {
+            List<Transaction> transactions = new List<Transaction>();
+            foreach (var block in _chain.OrderByDescending(x => x.Index))
+            {
+                var ownerTransactions = block.Transactions.Where(x => x.Sender == ownerAddress || x.Recipient == ownerAddress);
+                transactions.AddRange(ownerTransactions);
+            }
 
+            return transactions;
+        }
     }
 }

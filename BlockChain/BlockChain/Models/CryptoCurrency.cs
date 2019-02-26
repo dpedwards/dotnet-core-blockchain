@@ -231,6 +231,22 @@ namespace BlockChain.Models
             }
          }
 
+        /*
+         * Mine() Method for mining
+         * 
+         * @return block
+         */
+         internal Block Mine()
+         {
+            int proof = CreateProofOfWork(_lastBlock.PreviousHash);
+
+            Block block = CreateNewBlock(proof);
+
+            return block;
+         }
+
+
+
 
 
 

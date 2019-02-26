@@ -183,5 +183,30 @@ namespace BlockChain.Models
 
             return transactions;
         }
+
+        /*
+        * HasBalance() Method to check balance 
+        * 
+        * @param transaction
+        * @return balance
+        */
+        public bool HasBalance(Transaction transaction)
+        {
+            var balanceTransaction = TransactionByAddress(transaction.Sender);
+            decimal balance = 0;
+            foreach (var item in balanceTransaction)
+            {
+                if (item.Recipient == transaction.Sender)
+                {
+                    balance = balance + item.Amount;
+                }
+                else
+                {
+                    balance = balance - item.Amount;
+                }
+            }
+
+            return balance >= (transaction.Amount + transaction.Fees);
+        }
     }
 }

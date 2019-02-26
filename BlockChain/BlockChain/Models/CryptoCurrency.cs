@@ -261,6 +261,15 @@ namespace BlockChain.Models
             return JsonConvert.SerializeObject(response);
          }
 
+        /*
+         * RegisterNode() Method to add new address for node registration 
+         * 
+         * @param address
+         */
+         private void RegisterNode(string address)
+         {
+            _nodes.Add(new Node { Address = new Uri(address) });
+         }
 
 
 

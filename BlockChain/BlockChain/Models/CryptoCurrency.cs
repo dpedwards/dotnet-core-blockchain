@@ -415,6 +415,35 @@ namespace BlockChain.Models
             return response;
         }
 
+       /*
+        * GetTransactions() Function to get list of current transactions
+        * 
+        * @return _currentTransactions
+        */ 
+        internal List<Transaction> GetTransactions()
+        {
+            return _currentTransactions;
+        }
+
+       /*
+        * GetNodes() Function to get list of blockchain
+        */
+       internal List<Block> GetBlocks()
+       {
+            return _chain;
+       }
+
+       /*
+        * GetNodes() Function to get list of nodes
+        * 
+        * @return _nodes
+        */
+        internal List<Node> GetNodes()
+        {
+            return _nodes;
+        }
+
+      
 
 
          

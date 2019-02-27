@@ -443,10 +443,18 @@ namespace BlockChain.Models
             return _nodes;
         }
 
-      
+        /*
+        * GetMinersWallet() Function to get miners wallet
+        * 
+        * @return _minersWallet()
+        */
+        internal Wallet GetMinersWallet()
+        {
+            return _minersWallet;
+        }
 
 
-         
+
 
 
 

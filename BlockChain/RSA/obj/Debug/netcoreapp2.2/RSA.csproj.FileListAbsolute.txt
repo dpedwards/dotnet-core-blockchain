@@ -4,3 +4,12 @@ I:\data\MyProjects\GitHubs\dotnet-core-blockchain\BlockChain\RSA\obj\Debug\netco
 I:\data\MyProjects\GitHubs\dotnet-core-blockchain\BlockChain\RSA\obj\Debug\netcoreapp2.2\RSA.csproj.CoreCompileInputs.cache
 I:\data\MyProjects\GitHubs\dotnet-core-blockchain\BlockChain\RSA\obj\Debug\netcoreapp2.2\RSA.AssemblyInfoInputs.cache
 I:\data\MyProjects\GitHubs\dotnet-core-blockchain\BlockChain\RSA\obj\Debug\netcoreapp2.2\RSA.AssemblyInfo.cs
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\RSA\bin\Debug\netcoreapp2.2\RSA.deps.json
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\RSA\bin\Debug\netcoreapp2.2\RSA.dll
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\RSA\bin\Debug\netcoreapp2.2\RSA.pdb
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\RSA\obj\Debug\netcoreapp2.2\RSA.csprojAssemblyReference.cache
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\RSA\obj\Debug\netcoreapp2.2\RSA.csproj.CoreCompileInputs.cache
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\RSA\obj\Debug\netcoreapp2.2\RSA.AssemblyInfoInputs.cache
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\RSA\obj\Debug\netcoreapp2.2\RSA.AssemblyInfo.cs
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\RSA\obj\Debug\netcoreapp2.2\RSA.dll
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\RSA\obj\Debug\netcoreapp2.2\RSA.pdb

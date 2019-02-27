@@ -111,6 +111,17 @@ namespace BlockChain.Api
             return Ok(blockchain.Consensus());
          }
 
+        /*
+         * GetNodes() http web method to get blockchain nodes 
+         * 
+         * @return nodes = blockchain.GetNodes() 
+         */ 
+         [HttpGet("nodes")]
+         public IActionResult GetNodes()
+         {
+            return Ok(new { nodes = blockchain.GetNodes() });
+         }
+
 
     
 

@@ -60,6 +60,32 @@ namespace BlockChain.Api
             return Ok(response);
         }
 
+       /*
+        * Mine() http web method to get new forged block 
+        * 
+        * @return response
+        */ 
+        [HttpGet("mine")]
+        public IActionResult Mine()
+        {
+            var block = blockchain.Mine();
+            var response = new
+            {
+                message = "New Block Forged",
+                blockNumber = block.Index,
+                transactions = block.Transactions.ToArray(),
+                nonce = block.Proof,
+                previousHash = block.PreviousHash
+            };
+
+            return Ok(response);
+        }
+
+
+
+
+
+
       
 
 

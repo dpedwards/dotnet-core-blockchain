@@ -46,6 +46,20 @@ namespace BlockChain.Api
             return Ok(response);
         }
 
+       /*
+        * GetFullChain() http web method to get full chain
+        * 
+        * @return response
+        */ 
+        [HttpGet("chain")]
+        public IActionResult FullChain()
+        {
+            var blocks = blockchain.GetBlocks();
+            var response = new { chain = blocks, length = blocks.Count };
+
+            return Ok(response);
+        }
+
       
 
 

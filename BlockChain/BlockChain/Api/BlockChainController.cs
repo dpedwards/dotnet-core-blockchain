@@ -33,6 +33,21 @@ namespace BlockChain.Api
             return Ok(response);
         }
 
+       /*
+        * GetTransactions() http web method to get transactions
+        * 
+        * @return response
+        */ 
+        [HttpGet("transaction")]
+        public IActionResult GetTransactions()
+        {
+            var response = new { transactions = blockchain.GetTransactions() };
+
+            return Ok(response);
+        }
+
+      
+
 
 
     }

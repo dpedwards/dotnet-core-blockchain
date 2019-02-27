@@ -100,6 +100,18 @@ namespace BlockChain.Api
             return Created("", response);
         }
 
+        /*
+         * Consensus() http web method to get blockchain consensus 
+         * 
+         * @return blockchain.Consensus()
+         */ 
+         [HttpGet("nodes/resolve")]
+         public IActionResult Consensus()
+         {
+            return Ok(blockchain.Consensus());
+         }
+
+
     
 
 

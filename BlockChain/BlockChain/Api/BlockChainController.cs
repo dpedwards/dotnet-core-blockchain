@@ -122,6 +122,17 @@ namespace BlockChain.Api
             return Ok(new { nodes = blockchain.GetNodes() });
          }
 
+        /*
+         * GetMinersWallet() http web method to get miners wallet 
+         * 
+         * @return blockchain.GetMinersWallet()
+         */ 
+         [HttpGet("wallet/miner")]
+         public IActionResult GetMinersWallet()
+         {
+            return Ok(blockchain.GetMinersWallet());
+         }
+
 
     
 

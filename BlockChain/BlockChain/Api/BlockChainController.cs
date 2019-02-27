@@ -1,5 +1,6 @@
 ﻿using BlockChain.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace BlockChain.Api
 {
@@ -79,6 +80,24 @@ namespace BlockChain.Api
             };
 
             return Ok(response);
+        }
+
+       /*
+        * RegisterNodes() http web method to post new nodes to register 
+        * 
+        * @return Created()
+        */ 
+        [HttpPost("nodes/register")]
+        public IActionResult RegisterNodes(string[] nodes)
+        {
+            blockchain.RegisterNodes(nodes);
+            var response = new
+            {
+                message = "New nodes have been added",
+                totalNodes = nodes.Count()
+            };
+
+            return Created("", response);
         }
 
 

@@ -385,7 +385,41 @@ namespace BlockChain.Models
             return response;
          }
 
-        
+        /*
+         * CreateTransaction() Object
+         * 
+         * @param transaction
+         * @return response
+         */
+        internal object CreateTransaction(Transaction transaction)
+        {
+            var response = new object();
+            //verify
+            var verified = VerifyTransactionSignature(transaction, transaction.Signature, transaction.Sender);
+            if (verified == false || transaction.Sender == transaction.Recipient)
+            {
+                response = new { message = $"Invalid Transaction!" };
+                return response;
+            }
+            if (HasBalance(transaction) == false)
+            {
+                response = new { message = $"InSufficient Balance" };
+                return response;
+            }
+
+            AddTransaction(transaction);
+
+            var blockIndex = _lastBlock != null ? _lastBlock.Index + 1 : 0;
+
+            response = new { message = $"Transaction will be added to Block {blockIndex}" };
+            return response;
+        }
+
+
+
+         
+
+
 
 
 

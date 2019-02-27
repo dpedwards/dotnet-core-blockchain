@@ -1,10 +1,4 @@
-﻿// =======================================================
-// Author: Davain Pablo Edwards
-// Email:  core8@gmx.net
-// Web:    
-// =======================================================
-
-using System;
+﻿using System;
 
 namespace BlockChain.Models
 {

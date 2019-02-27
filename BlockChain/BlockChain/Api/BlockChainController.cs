@@ -85,7 +85,7 @@ namespace BlockChain.Api
        /*
         * RegisterNodes() http web method to post new nodes to register 
         * 
-        * @return Created()
+        * @return response
         */ 
         [HttpPost("nodes/register")]
         public IActionResult RegisterNodes(string[] nodes)
@@ -99,6 +99,8 @@ namespace BlockChain.Api
 
             return Created("", response);
         }
+
+    
 
 
 

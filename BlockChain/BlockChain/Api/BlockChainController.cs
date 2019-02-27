@@ -1,4 +1,5 @@
 ﻿using BlockChain.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -12,6 +13,7 @@ namespace BlockChain.Api
     * @license MIT 
     * @version 1.0
     */
+    [EnableCors("MyPolicy")]
     [Produces("application/json")]
     [Route("")]
     public class BlockChainController : Controller

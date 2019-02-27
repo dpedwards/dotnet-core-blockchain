@@ -19,9 +19,21 @@ namespace BlockChain.Api
         // Initial cryptocurrency mechanisms
         public static CryptoCurrency blockchain = new CryptoCurrency();
 
-       
+       /*
+        * NewTransaction() http web method to post new transactions
+        * 
+        * @param transaction 
+        * @return response
+        */
+        [HttpPost("transactions/new")]
+        public IActionResult NewTransaction([FromBody]Transaction transaction)
+        {
+            var response = blockchain.CreateTransaction(transaction);
 
-       
+            return Ok(response);
+        }
+
+
 
     }
 }

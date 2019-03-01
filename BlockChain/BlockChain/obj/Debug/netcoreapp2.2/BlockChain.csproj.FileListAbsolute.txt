@@ -53,3 +53,5 @@ I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\BlockChain\obj\Debug
 I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\BlockChain\obj\Debug\netcoreapp2.2\BlockChain.csproj.CopyComplete
 I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\BlockChain\obj\Debug\netcoreapp2.2\BlockChain.dll
 I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\BlockChain\obj\Debug\netcoreapp2.2\BlockChain.pdb
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\BlockChain\obj\Debug\netcoreapp2.2\Razor\Views\Home\CoinBase.g.cshtml.cs
+I:\data\MyProjects\GitHub\dotnet-core-blockchain\BlockChain\BlockChain\obj\Debug\netcoreapp2.2\Razor\Views\Home\Configure.g.cshtml.cs

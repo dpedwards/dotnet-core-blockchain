@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewData["Title"] = "CoinBase";
+    Layout = null;
+}
+
+<link rel="stylesheet" href="/blockchain/stylesheets/lib/bootstrap.min.css"><link rel="stylesheet" href="/blockchain/stylesheets/lib/bootstrap-theme.min.css"><link rel="stylesheet" href="/blockchain/stylesheets/lib/bootstrap-horizon.css"><link rel="stylesheet" href="/blockchain/stylesheets/lib/ladda-themeless.min.css"><link rel="stylesheet" href="/blockchain/stylesheets/lib/ie10-viewport-bug-workaround.css"><link rel="stylesheet" href="/blockchain/stylesheets/blockchain.css">
+
+
+<div class="container-fluid">
+    <h2>CoinBase</h2>
+    @{
+        var blocks = ViewBag.Blocks as List<Block>;
+    }
+    <div class="row row-horizon">
+        @{
+            int i = 1;
+            int j = 1;
+        }
+        @foreach (var block in blocks)
+        {
+            <div class="col-xs-7" style="">
+                <div id="block1chain1well" class="well well-success" style="">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="block1chain1number" class="col-sm-2 control-label">Block:</label>
+                            <div class="col-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon">#</span>
+                                    <input id="block1chain1number" type="text" value="@i" onkeyup="updateChain(1, 1);" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="block1chain1nonce" class="col-sm-2 control-label">Nonce:</label><div class="col-sm-10">
+                                <input id="block1chain1nonce" type="text" value="@block.Proof" onkeyup="updateChain(1, 1);" class="form-control">
+                            </div>
+                        </div><div class="form-group">
+                            <label class="col-sm-2 control-label">Tx:</label>
+                            <div class="col-sm-10">
+                                @foreach (var item in block.Transactions)
+                                {
+                                    <div class="input-group">
+                                        <div class="input-group-addon">$</div>
+                                        <input id="block1chain1tx0value" type="text" value="@item.Amount" onkeyup="updateChain(1, 1);" class="form-control">
+                                        <div class="input-group-addon">From:</div><input id="block1chain1tx0from" type="text" value="@item.Sender" onkeyup="updateChain(1, 1);" class="form-control"><div class="input-group-addon">-&gt;</div>
+                                        <input id="block1chain1tx0to" type="text" value="@item.Recipient" onkeyup="updateChain(1, 1);" class="form-control">
+                                    </div>
+                                    j++;
+                                }
+
+
+                            </div>
+                        </div>
+                        @*<div id="state" class="form-group">
+                                <label for="block1chain1previous" class="col-sm-2 control-label">Prev:</label><div class="col-sm-10"><input id="block1chain1previous" type="text" value="@block.PreviousHash" class="form-control"></div>
+                            </div>
+                            <div id="state" class="form-group">
+                                <label for="block1chain1hash" class="col-sm-2 control-label">Hash:</label>
+                                <div class="col-sm-10"><input id="block1chain1hash" type="text" disabled="" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2"><i class="icon-spinner icon-spin icon-large"></i></div><div class="col-sm-10"><button id="block1chain1mineButton" data-style="expand-right" class="btn btn-primary ladda-button"><span class="ladda-label">Mine</span></button></div>
+                            </div>*@
+                    </form>
+
+                </div>
+
+            </div>
+            i++;
+        }
+
+
+    </div>
+</div>

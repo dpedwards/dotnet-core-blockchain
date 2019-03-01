@@ -38,7 +38,17 @@ namespace BlockChain.Controllers
             return View();
         }
 
- 
+       /*
+        * Mine() action Method for redirection to index view 
+        *
+        *@return RedirectToAction("Index")
+        */ 
+        public IActionResult Mine()
+        {
+           blockchain.Mine();
+           return RedirectToAction("Index");
+        }
+
         public IActionResult Privacy()
         {
             return View();

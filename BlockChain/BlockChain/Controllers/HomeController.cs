@@ -73,6 +73,18 @@ namespace BlockChain.Controllers
             return RedirectToAction("Configure");
         }
 
+        /*
+         * CoinBase() action Method to show block(s) information to configure view 
+         * 
+         * @return View() 
+         */
+        public IActionResult CoinBase()
+        {
+            List<Block> blocks = blockchain.GetBlocks();
+            ViewBag.Blocks = blocks;
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

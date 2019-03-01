@@ -49,6 +49,16 @@ namespace BlockChain.Controllers
            return RedirectToAction("Index");
         }
 
+       /*
+        * Configure() action Method to show node(s) information to configure view 
+        * 
+        *@return View()
+        */ 
+        public IActionResult Configure()
+        {
+            return View(blockchain.GetNodes());
+        }
+
         public IActionResult Privacy()
         {
             return View();

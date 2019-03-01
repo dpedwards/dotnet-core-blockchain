@@ -59,6 +59,20 @@ namespace BlockChain.Controllers
             return View(blockchain.GetNodes());
         }
 
+        /*
+         * RegisterNodes() http web action method to post nodes to blockchain and redirection to configure view
+         * 
+         * @param nodes
+         * @return RedirectToAction("Configure")
+         */
+        [HttpPost]
+        public IActionResult RegisterNodes(string nodes)
+        {
+            string[] node = nodes.Split(',');
+            blockchain.RegisterNodes(node);
+            return RedirectToAction("Configure");
+        }
+
         public IActionResult Privacy()
         {
             return View();

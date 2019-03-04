@@ -1,4 +1,4 @@
-# [Blockchain concept project](https://dpedwards.github.io/dotnet-core-blockchain/)
+# [Blockchain concept project](https://github.com/dpedwards/dotnet-core-blockchain)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/dpedwards/dotnet-core-blockchain/master/LICENSE)
 [![.NET Core](https://img.shields.io/badge/dotnet%20core-%3E%3D%202.2-blue.svg)](https://dotnet.microsoft.com/download)
@@ -12,6 +12,16 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/dare2101)
 
+## Pictures 
+
+Mine:
+![](BlockChain/images/Blockchain%20Frontend_Mine.png)
+
+Add Node:
+![](BlockChain/images/Blockchain%20Frontend_Configure.png)
+
+Blockchain Overview:
+![](BlockChain/images/Blockchain%20Frontend_CoinBase.png) 
 
 ## Notable features
 
@@ -24,7 +34,7 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
 
 ## Usage
 
-For detailed instructions on how to configure, customize, add/migrate content, and more read the [project`s documentation](https://dpedwards.github.io/dotnet-core-blockchain/docs/quick-start-guide/).
+For detailed instructions on how to configure, customize, add/migrate content, and more read the [project`s documentation](https://github.com/dpedwards/dotnet-core-blockchain/docs/quick-start-guide/).
 
 ---
 

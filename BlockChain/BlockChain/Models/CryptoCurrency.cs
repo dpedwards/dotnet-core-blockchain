@@ -34,7 +34,7 @@ namespace BlockChain.Models
         
         public string NodeId { get; private set; }
         static int blockCount = 0;
-        static decimal reward = 1; // Set test reward value
+        static decimal reward = 50; // Set test reward value
 
         static string minerPrivateKey = "";
         static Wallet _minersWallet = RSA.RSA.KeyGenerate();
@@ -44,11 +44,11 @@ namespace BlockChain.Models
          */ 
         public CryptoCurrency()
         {
-            minerPrivateKey = _minersWallet.PrivateKey;
-            NodeId = _minersWallet.PublicKey;
+            minerPrivateKey = _minersWallet.PrivateKey; //"L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL";
+            NodeId = _minersWallet.PublicKey; //"18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ";
 
             // Initial transaction
-            var transaction = new Transaction { Sender = "0", Recipient = NodeId, Amount = 49, Fees = 0, Signature = "" };
+            var transaction = new Transaction { Sender = "0", Recipient = NodeId, Amount = 50, Fees = 0, Signature = "" };
             _currentTransactions.Add(transaction);
 
             CreateNewBlock(proof: 100, previousHash: "1"); // Genesis block 
@@ -178,10 +178,9 @@ namespace BlockChain.Models
             List<Transaction> transactions = new List<Transaction>();
             foreach (var block in _chain.OrderByDescending(x => x.Index))
             {
-                var ownerTransactions = block.Transactions.Where(x => x.Sender == ownerAddress || x.Recipient == ownerAddress);
+                var ownerTransactions = block.Transactions.Where(x => x.Sender == ownerAddress || x.Recipient == ownerAddress).ToList();
                 transactions.AddRange(ownerTransactions);
             }
-
             return transactions;
         }
 
@@ -191,12 +190,12 @@ namespace BlockChain.Models
          * @param transaction
          * @return balance
          */
-         public bool HasBalance(Transaction transaction)
-         {
-             var balanceTransaction = TransactionByAddress(transaction.Sender);
-             decimal balance = 0;
-             foreach (var item in balanceTransaction)
-             {
+        public bool HasBalance(Transaction transaction)
+        {
+            var transactions = TransactionByAddress(transaction.Sender);
+            decimal balance = 0;
+            foreach (var item in transactions)
+            {
                 if (item.Recipient == transaction.Sender)
                 {
                     balance = balance + item.Amount;
@@ -205,17 +204,17 @@ namespace BlockChain.Models
                 {
                     balance = balance - item.Amount;
                 }
-             }
+            }
 
-             return balance >= (transaction.Amount + transaction.Fees);
-         }
+            return balance >= (transaction.Amount + transaction.Fees);
+        }
 
         /*
          * AddTransaction() Method to add transaction 
          * 
          * @param transaction
          */
-         private void AddTransaction(Transaction transaction)
+        private void AddTransaction(Transaction transaction)
          {
             _currentTransactions.Add(transaction);
 

@@ -6,13 +6,13 @@ using System.Linq;
 namespace BlockChain.Api
 {
 
-   /**
-    * Used to define blockchain interactions
-    * 
-    * @author Davain Pablo Edwards
-    * @license MIT 
-    * @version 1.0
-    */
+    /**
+     * Used to define blockchain interactions
+     * 
+     * @author Davain Pablo Edwards
+     * @license MIT 
+     * @version 1.0
+     */
     [EnableCors("MyPolicy")]
     [Produces("application/json")]
     [Route("")]
@@ -22,12 +22,12 @@ namespace BlockChain.Api
         // Initial cryptocurrency mechanisms
         public static CryptoCurrency blockchain = new CryptoCurrency();
 
-       /*
-        * NewTransaction() http web method to post new transactions
-        * 
-        * @param transaction 
-        * @return response
-        */
+        /*
+         * NewTransaction() http web method to post new transactions
+         * 
+         * @param transaction 
+         * @return response
+         */
         [HttpPost("transactions/new")]
         public IActionResult NewTransaction([FromBody]Transaction transaction)
         {
@@ -41,7 +41,7 @@ namespace BlockChain.Api
         * 
         * @return response
         */ 
-        [HttpGet("transaction")]
+        [HttpGet("transactions/get")]
         public IActionResult GetTransactions()
         {
             var response = new { transactions = blockchain.GetTransactions() };
@@ -118,7 +118,7 @@ namespace BlockChain.Api
          * 
          * @return nodes = blockchain.GetNodes() 
          */ 
-         [HttpGet("nodes")]
+         [HttpGet("nodes/get")]
          public IActionResult GetNodes()
          {
             return Ok(new { nodes = blockchain.GetNodes() });

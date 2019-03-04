@@ -46,9 +46,8 @@
 
         <div class="col-lg-12" id="list_nodes">
             <ul>
-                @foreach (var item in Model)
-                {
-                    <li><a href="@item.Address">@item.Address</a></li>
+                @foreach(var item in Model){
+                <li><a href="@item.Address">@item.Address</a></li>
                 }
             </ul>
         </div>

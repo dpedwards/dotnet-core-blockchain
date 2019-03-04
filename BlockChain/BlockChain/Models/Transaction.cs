@@ -34,7 +34,7 @@ namespace BlockChain.Models
         /**
          * Overrides and returns the amount string with recipient and sender string.
          * 
-         * @return amount + recipient + sender 
+         * @return Amount + Recipient + Sender 
          */ 
         public override string ToString()
         {

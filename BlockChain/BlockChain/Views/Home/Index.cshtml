@@ -118,42 +118,42 @@
 
 <script>
 
-        $(function () {
+    $(function () {
 
 
-            $('#unmined_transactions_table').dataTable();
+        $('#unmined_transactions_table').dataTable();
 
-            $('#transactions_table').dataTable();
+        $('#transactions_table').dataTable();
 
 
-            $("#refresh_transactions").click(function () {
+        $("#refresh_transactions").click(function () {
 
-                window.location.reload();
+            window.location.reload();
 
+        });
+
+
+        $("#refresh_blockchain").click(function () {
+
+            $.ajax({
+                url: "/nodes/resolve",
+                type: "GET",
+                success: function (response) {
+
+                    window.location.reload();
+
+                },
+                error: function (error) {
+                    console.log(error);
+                }
             });
 
-
-            $("#refresh_blockchain").click(function () {
-
-                $.ajax({
-                    url: "/nodes/resolve",
-                    type: "GET",
-                    success: function (response) {
-
-                        window.location.reload();
-
-                    },
-                    error: function (error) {
-                        console.log(error);
-                    }
-                });
-
-            });
+        });
 
 
 
 
-        })
+    })
 
 </script>
 

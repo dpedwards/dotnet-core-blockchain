@@ -1,4 +1,4 @@
-# [Blockchain concept project](https://dpedwards.github.io/dotnet-core-blockchain/)
+# [Blockchain concept project](https://github.com/dpedwards/dotnet-core-blockchain)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/dpedwards/dotnet-core-blockchain/master/LICENSE)
 [![.NET Core](https://img.shields.io/badge/dotnet%20core-%3E%3D%202.2-blue.svg)](https://dotnet.microsoft.com/download)
@@ -34,7 +34,7 @@ Blockchain Overview:
 
 ## Usage
 
-For detailed instructions on how to configure, customize, add/migrate content, and more read the [project`s documentation](https://dpedwards.github.io/dotnet-core-blockchain/docs/quick-start-guide/).
+For detailed instructions on how to configure, customize, add/migrate content, and more read the [project`s documentation](https://github.com/dpedwards/dotnet-core-blockchain/docs/quick-start-guide/).
 
 ---
 

@@ -54,6 +54,10 @@ project documentation and demo pages can be found in the [`/docs`](docs) if subm
 - <https://twitter.com/soon>
 - <https://github.com/dpedwards>
 
+### Requirements
+
+- [Visual Studio](https://visualstudio.microsoft.com/de/vs/)
+
 
 ### Other:
 

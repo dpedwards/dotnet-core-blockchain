@@ -12,6 +12,16 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/dare2101)
 
+## Pictures 
+
+Mine:
+![](BlockChain/images/Blockchain%20Frontend_Mine.png)
+
+Add Node:
+![](BlockChain/images/Blockchain%20Frontend_Configure.png)
+
+Blockchain Overview:
+![](BlockChain/images/Blockchain%20Frontend_CoinBase.png) 
 
 ## Notable features
 

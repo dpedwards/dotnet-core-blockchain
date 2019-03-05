@@ -44,8 +44,9 @@ namespace BlockChain.Models
          */ 
         public CryptoCurrency()
         {
-            minerPrivateKey = _minersWallet.PrivateKey; //"L3aq7WPiSois3N7GxTr6ZSXMNdfbAZWNebiYvKK5hAUBCijk95rL";
-            NodeId = _minersWallet.PublicKey; //"18jp31DcT3n5vsYHGVhhQa2qsvEve4EUoQ";
+            // Set test public / private keys
+            minerPrivateKey = "KwdUArshaG5LjrY5bji5oJMLvWfwfxkdJAHNYXhf8A49AS89Csi3";//_minersWallet.PrivateKey; 
+            NodeId = "1EDvdbQVNEtEvSsUpwunpjbGoZa3SCnkUu"; //_minersWallet.PublicKey; 
 
             // Initial transaction
             var transaction = new Transaction { Sender = "0", Recipient = NodeId, Amount = 50, Fees = 0, Signature = "" };

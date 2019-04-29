@@ -6,6 +6,17 @@
 
 A blockchain is a growing list of records, called blocks. The blocks are linked using cryptography and each block contains a cryptographic hash of the previous block, transaction data, and a timestamp. 
 
+
+## Notable features
+
+- cryptography 
+- process of creating blocks
+- process of chaining blocks 
+- network & mining
+- etc.
+
+### Note
+
 - Blockchain is listening on port :43210
   - Fixed blockchain public key for easy testing: 1EDvdbQVNEtEvSsUpwunpjbGoZa3SCnkUu
   - Fixed blockchain private key for easy testing: KwdUArshaG5LjrY5bji5oJMLvWfwfxkdJAHNYXhf8A49AS89Csi3
@@ -26,15 +37,6 @@ Add Node:
 
 Blockchain Overview:
 ![](BlockChain/images/Blockchain%20Frontend_CoinBase.png) 
-
-## Notable features
-
-- cryptography 
-- process of creating blocks
-- process of chaining blocks 
-- network & mining
-- etc.
-
 
 ## Usage
 

@@ -15,7 +15,7 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
 - network & mining
 - etc.
 
-### Note
+## Note
 
 - Blockchain is listening on port :43210
   - Fixed blockchain public key for easy testing: 1EDvdbQVNEtEvSsUpwunpjbGoZa3SCnkUu

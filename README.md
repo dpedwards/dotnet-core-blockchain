@@ -21,8 +21,6 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
   - Fixed blockchain public key for easy testing: 1EDvdbQVNEtEvSsUpwunpjbGoZa3SCnkUu
   - Fixed blockchain private key for easy testing: KwdUArshaG5LjrY5bji5oJMLvWfwfxkdJAHNYXhf8A49AS89Csi3
 
-:sparkles: See what`s new in the [CHANGELOG](CHANGELOG.md).
-
 **If you enjoy this project, please consider [supporting me](https://www.paypal.me/dare2101) for developing and maintaining it.**
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/dare2101)
@@ -40,13 +38,9 @@ Blockchain Overview:
 
 ## Usage
 
-For detailed instructions on how to configure, customize, add/migrate content, and more read the [project`s documentation](https://github.com/dpedwards/dotnet-core-blockchain/docs/quick-start-guide/).
+Read the full instructions to use the BlockChain: https://github.com/dpedwards/dotnet-core-blockchain-advanced
 
 ---
-
-## Contributing
-
-Having trouble working with the project? Found a typo in the documentation? Interested in adding a feature or [fixing a bug](https://github.com/dpedwards/dotnet-core-blockchain/issues)? Then by all means [submit an issue](https://github.com/dpedwards/dotnet-core-blockchain/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
 
 ### Pull Requests
 

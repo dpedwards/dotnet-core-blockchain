@@ -60,8 +60,6 @@ project documentation and demo pages can be found in the [`/docs`](docs) if subm
 
 **Davain Pablo Edwards**
 
-- <https://soon.com>
-- <https://twitter.com/soon>
 - <https://github.com/dpedwards>
 
 ### Requirements

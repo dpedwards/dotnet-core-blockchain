@@ -21,10 +21,6 @@ A blockchain is a growing list of records, called blocks. The blocks are linked 
   - Fixed blockchain public key for easy testing: 1EDvdbQVNEtEvSsUpwunpjbGoZa3SCnkUu
   - Fixed blockchain private key for easy testing: KwdUArshaG5LjrY5bji5oJMLvWfwfxkdJAHNYXhf8A49AS89Csi3
 
-**If you enjoy this project, please consider [supporting me](https://www.paypal.me/dare2101) for developing and maintaining it.**
-
-[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/dare2101)
-
 ## Pictures 
 
 Mine:
@@ -38,7 +34,7 @@ Blockchain Overview:
 
 ## Usage
 
-Read the full instructions to use the BlockChain: https://github.com/dpedwards/dotnet-core-blockchain-advanced
+Read the full instructions to use the BlockChain: https://github.com/dpedwards/dotnet-core-blockchain-payment-solution
 
 ---
 
